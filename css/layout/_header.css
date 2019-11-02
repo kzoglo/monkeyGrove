@@ -1,0 +1,7 @@
+.header {
+    text-align: center;
+    background-image: radial-gradient(farthest-side at 0 0, #e66465, #9198e5);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}

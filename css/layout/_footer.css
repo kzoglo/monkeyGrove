@@ -1,0 +1,72 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(84, 95, 157);
+    overflow: hidden;
+}
+
+.footer__div {
+    flex: 1;
+    border: 1px solid transparent;
+}
+
+.footer__div--author {
+    padding: 20px;
+    order: 1;
+}
+
+.footer__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/************ PSEUDO CLASSES ************/
+.footer__div:not(.footer__div--author):hover {
+    animation: onHover .5s linear forwards;
+}
+
+/************ ANIMATIONS ************/
+@keyframes onHover {
+    from {
+        border: 1px solid red;
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(1.2);
+        background-color: rgba(181, 185, 204, 0.507);
+    }
+}
+
+/************ MEDIA QUERIES ************/
+@media screen and (min-width: 860px) {
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer__div:nth-child(2) {
+        order: 1;
+    }
+
+    .footer__div--author {
+        flex: 3;
+        order: 0;
+    }
+
+    @keyframes onHover {
+        from {
+            border: 1px solid red;
+            transform: scaleY(1);
+        }
+
+        to {
+            transform: scaleY(1.2);
+            background-color: rgba(174, 178, 199, 0.507);
+            ;
+        }
+    }
+}
