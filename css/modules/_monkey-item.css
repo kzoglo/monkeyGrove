@@ -1,8 +1,14 @@
 .monkey-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 400px;
     flex: 1 1 400px;
     margin: 10px;
     overflow: hidden;
+    -webkit-transition: opacity, border, -webkit-transform .4s ease-out;
+    transition: opacity, border, -webkit-transform .4s ease-out;
+    -o-transition: opacity, border, transform .4s ease-out;
     transition: opacity, border, transform .4s ease-out;
+    transition: opacity, border, transform .4s ease-out, -webkit-transform .4s ease-out;
 }
 
 .monkey-item:nth-child(even) {
@@ -16,6 +22,7 @@
 .monkey-item img {
     width: 100%;
     height: 100%;
+    -webkit-box-shadow: 5px 5px rgb(168, 168, 206);
     box-shadow: 5px 5px rgb(168, 168, 206);
 }
 
@@ -23,34 +30,46 @@
 .monkey-item:nth-child(odd):hover {
     opacity: .8;
     border: 5px solid rgb(118, 142, 156);
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
     transform: rotate(1deg);
 }
 
 .monkey-item:nth-child(even):hover {
     opacity: .8;
     border: 5px solid rgb(118, 142, 156);
+    -webkit-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
     transform: rotate(-1deg);
 }
 
 /************ MEDIA QUERIES ************/
 @media screen and (min-width: 550px) {
     .monkey-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 40%;
         flex: 1 1 40%;
     }
 }
 
 @media screen and (min-width: 800px) {
     .monkey-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 30%;
         flex: 1 1 30%;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .monkey-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 20%;
         flex: 1 1 20%;
     }
 
     .monkey-item__last-row {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
         flex: 1 0 20%;
         max-width: 24%;
     }
