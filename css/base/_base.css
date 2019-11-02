@@ -1,0 +1,26 @@
+/************ RESET ************/
+* {
+    box-sizing: border-box;
+    font-size: var(--fontSize);
+    font-family: 'B612 Mono', monospace;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: repeating-linear-gradient(180deg, rgb(173, 147, 206), rgb(204, 221, 223), rgb(114, 114, 136), rgb(117, 87, 155), rgb(204, 221, 223));
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(125, 21, 99);
+    font-family: 'Oswald', sans-serif;
+}
+
+
+h1,
+h2,
+h3 {
+    text-shadow: -2px -2px white;
+}
