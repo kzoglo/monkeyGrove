@@ -1,5 +1,10 @@
 .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 30px;
     text-align: center;
@@ -8,12 +13,16 @@
 }
 
 .footer__div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     border: 1px solid transparent;
 }
 
 .footer__div--author {
     padding: 20px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
 }
 
@@ -26,17 +35,34 @@
 
 /************ PSEUDO CLASSES ************/
 .footer__div:not(.footer__div--author):hover {
+    -webkit-animation: onHover .5s linear forwards;
     animation: onHover .5s linear forwards;
 }
 
 /************ ANIMATIONS ************/
-@keyframes onHover {
+@-webkit-keyframes onHover {
     from {
         border: 1px solid red;
+        -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
 
     to {
+        -webkit-transform: scaleX(1.2);
+        transform: scaleX(1.2);
+        background-color: rgba(181, 185, 204, 0.507);
+    }
+}
+
+@keyframes onHover {
+    from {
+        border: 1px solid red;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    to {
+        -webkit-transform: scaleX(1.2);
         transform: scaleX(1.2);
         background-color: rgba(181, 185, 204, 0.507);
     }
@@ -45,25 +71,51 @@
 /************ MEDIA QUERIES ************/
 @media screen and (min-width: 860px) {
     .footer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
     }
 
     .footer__div:nth-child(2) {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
     }
 
     .footer__div--author {
+        -webkit-box-flex: 3;
+        -ms-flex: 3;
         flex: 3;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
         order: 0;
+    }
+
+    @-webkit-keyframes onHover {
+        from {
+            border: 1px solid red;
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+
+        to {
+            -webkit-transform: scaleY(1.2);
+            transform: scaleY(1.2);
+            background-color: rgba(174, 178, 199, 0.507);
+            ;
+        }
     }
 
     @keyframes onHover {
         from {
             border: 1px solid red;
+            -webkit-transform: scaleY(1);
             transform: scaleY(1);
         }
 
         to {
+            -webkit-transform: scaleY(1.2);
             transform: scaleY(1.2);
             background-color: rgba(174, 178, 199, 0.507);
             ;
