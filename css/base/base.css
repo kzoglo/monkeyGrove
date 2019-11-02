@@ -1,5 +1,6 @@
 /************ RESET ************/
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: var(--fontSize);
     font-family: 'B612 Mono', monospace;
@@ -8,6 +9,7 @@
 }
 
 body {
+    background-image: -o-repeating-linear-gradient(top, rgb(173, 147, 206), rgb(204, 221, 223), rgb(114, 114, 136), rgb(117, 87, 155), rgb(204, 221, 223));
     background-image: repeating-linear-gradient(180deg, rgb(173, 147, 206), rgb(204, 221, 223), rgb(114, 114, 136), rgb(117, 87, 155), rgb(204, 221, 223));
 }
 
