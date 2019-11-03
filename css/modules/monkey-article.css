@@ -4,6 +4,9 @@
     justify-items: center;
     gap: 20px;
     margin-top: 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 60% 30%;
+    height: 800px;
 }
 
 .monkey-article__title {
@@ -17,17 +20,20 @@
 .monkey-article__descr {
     margin: 0;
     text-align: center;
+
 }
 
 .monkey-article__img {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
+
+    /* display: inline-block; */
     border-radius: 20px;
     -webkit-box-shadow: 5px 5px rgb(168, 168, 206);
     box-shadow: 5px 5px rgb(168, 168, 206);
 }
 
-/************ PSEUDO CLASSES ************/
+/************ MEDIA QUERIES ************/
 
 @media screen and (min-width: 860px) {
 
