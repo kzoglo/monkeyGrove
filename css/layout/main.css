@@ -25,8 +25,8 @@
 
 /************ PSEUDO ELEMENTS ************/
 .main__title::after {
-    content: "";
-    background: url("../../img/jungle.jpg");
+    content: '';
+    background: url('../../img/jungle.jpg');
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -88,7 +88,7 @@
 .monkeys-descriptions {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: calc(100%/ 6) 30px calc(100%/ 6) 30px calc(100%/ 6) 30px calc(100%/ 6) 30px calc(100%/ 6) 30px calc(100%/ 6);
+    -ms-grid-rows: calc(100% / 6) 30px calc(100% / 6) 30px calc(100% / 6) 30px calc(100% / 6) 30px calc(100% / 6) 30px calc(100% / 6);
     grid-template-rows: repeat(6, calc(100% / 6));
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
@@ -129,7 +129,7 @@
 /************ MEDIA QUERIES ************/
 @media screen and (min-width: 1100px) {
     .monkeys-descriptions {
-        -ms-grid-rows: (calc(100%/ 3))[3];
+        -ms-grid-rows: (calc(100% / 3)) [3];
         grid-template-rows: repeat(3, calc(100% / 3));
         -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
