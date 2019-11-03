@@ -4,7 +4,7 @@
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
     -ms-grid-rows: (calc(100%/ 3))[3];
-    grid-template-rows: repeat(3, calc(100% / 3));
+    grid-template-rows: repeat(3, minmax(30px, calc(100% / 3)));
 }
 
 .navigation-list>*:nth-child(1) {
@@ -31,7 +31,7 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    padding: 20px 30px;
+    padding: 10px 30px;
     -webkit-transition: opacity, background-color .3s ease-in-out;
     -o-transition: opacity, background-color .3s ease-in-out;
     transition: opacity, background-color .3s ease-in-out;
@@ -103,5 +103,9 @@
         justify-self: flex-end;
         -ms-grid-column: 6;
         grid-column-start: 6;
+    }
+
+    .navigation-list__btn {
+        padding: 20px 30px;
     }
 }
